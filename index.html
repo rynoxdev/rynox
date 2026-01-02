@@ -4,242 +4,37 @@
 <meta charset="UTF-8">
 <title>RYNØX | Presença Digital Profissional</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-:root {
-  --bg:#0e0e11;
-  --card:#16161d;
-  --text:#f5f5f5;
-  --muted:#cfcfcf;
-  --blue:#4da3ff;
-}
-
-*{box-sizing:border-box}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body{
-  margin:0;
-  font-family:Inter,Arial,sans-serif;
-  background:radial-gradient(circle at top,#15151c,#0e0e11);
-  color:var(--text);
-  overflow-x:hidden;
-}
-
-/* MENU */
-nav{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(14,14,17,.85);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid #1f1f28;
-}
-
-nav ul{
-  max-width:1000px;
-  margin:auto;
-  padding:16px 20px;
-  list-style:none;
-  display:flex;
-  gap:28px;
-}
-
-nav a{
-  color:var(--muted);
-  text-decoration:none;
-  font-size:.95rem;
-}
-
-nav a:hover{
-  color:#fff;
-}
-
-header,section{
-  max-width:1000px;
-  margin:auto;
-  padding:80px 20px;
-  opacity:0;
-  transform:translateY(30px);
-  transition:.8s ease;
-}
-
-header.show,section.show{
-  opacity:1;
-  transform:none;
-}
-
-header{text-align:center}
-
-header img{
-  width:140px;
-  margin-bottom:30px;
-}
-
-h1{font-size:3rem;font-weight:800}
-h2{font-size:2rem;margin-bottom:40px}
-
-p{
-  font-size:1.15rem;
-  color:var(--muted);
-  line-height:1.7;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:40px;
-  padding:18px 42px;
-  background:linear-gradient(135deg,#fff,#dcdcdc);
-  color:#000;
-  font-weight:700;
-  border-radius:14px;
-  text-decoration:none;
-  animation:pulse 2.2s infinite;
-}
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(255,255,255,.35)}
-  70%{box-shadow:0 0 0 18px rgba(255,255,255,0)}
-  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:28px;
-}
-
-.card{
-  position:relative;
-  padding:2px;
-  border-radius:22px;
-  overflow:hidden;
-}
-
-.card::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  background:conic-gradient(from 0deg,transparent,var(--blue),transparent 30%);
-  animation:border-spin 4s linear infinite;
-}
-
-.card::after{
-  content:"";
-  position:absolute;
-  inset:2px;
-  background:var(--card);
-  border-radius:20px;
-  z-index:1;
-}
-
-.card-inner{
-  position:relative;
-  z-index:2;
-  padding:42px 30px;
-}
-
-.card-inner span{
-  font-size:28px;
-  display:block;
-  margin-bottom:14px;
-}
-
-.card-inner h3{
-  margin:0 0 10px;
-  font-size:1.2rem;
-}
-
-.card-inner p{
-  margin:0;
-  font-size:1rem;
-}
-
-@keyframes border-spin{
-  from{transform:rotate(0)}
-  to{transform:rotate(360deg)}
-}
-
-footer{
-  text-align:center;
-  padding:50px 20px;
-  font-size:.9rem;
-  color:#777;
-  border-top:1px solid #1f1f28;
-}
-
-@media(max-width:600px){
-  h1{font-size:2.3rem}
-}
-</style>
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav>
 <ul>
-  <li><a href="#servicos">Serviços</a></li>
-  <li><a href="#planos">Planos</a></li>
-  <li><a href="#sobre">Sobre</a></li>
-  <li><a href="#contato">Contato</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="servicos.html">Serviços</a></li>
+<li><a href="planos.html">Planos</a></li>
+<li><a href="sobre.html">Sobre</a></li>
 </ul>
 </nav>
 
 <header>
-  <img src="assets/logo.svg" alt="RYNØX">
-  <h1>Sites modernos.<br>Presença profissional.</h1>
-  <p>Criamos sites rápidos, elegantes e focados em resultado.</p>
-  <a class="btn" href="https://wa.me/5562999483199" target="_self">
-    SOLICITAR ORÇAMENTO
-  </a>
+<img src="assets/logo.svg">
+<h1>Sites modernos.<br>Presença profissional.</h1>
+<p>Criamos sites rápidos, elegantes e focados em resultado.</p>
+<a class="btn" href="https://wa.me/5562999483199">SOLICITAR ORÇAMENTO</a>
 </header>
 
-<section id="servicos">
-<h2>O que fazemos</h2>
+<section>
+<h2>Por que a RYNØX?</h2>
 <div class="grid">
-  <div class="card"><div class="card-inner"><span>🖥️</span><h3>Sites institucionais</h3><p>Presença profissional para empresas.</p></div></div>
-  <div class="card"><div class="card-inner"><span>🎨</span><h3>Portfólios</h3><p>Mostre seu trabalho com impacto.</p></div></div>
-  <div class="card"><div class="card-inner"><span>🚀</span><h3>Landing pages</h3><p>Foco total em conversão.</p></div></div>
+<div class="card"><div class="card-inner"><span>✨</span><h3>Design premium</h3><p>Visual limpo e moderno.</p></div></div>
+<div class="card"><div class="card-inner"><span>⚡</span><h3>Performance</h3><p>Sites rápidos e leves.</p></div></div>
+<div class="card"><div class="card-inner"><span>🎯</span><h3>Resultado</h3><p>Foco total em conversão.</p></div></div>
 </div>
 </section>
 
-<section id="planos">
-<h2>Planos</h2>
-<div class="grid">
-  <div class="card"><div class="card-inner"><span>🟢</span><h3>Projeto</h3><p>Pagamento único pelo desenvolvimento do site.</p></div></div>
-  <div class="card"><div class="card-inner"><span>🔧</span><h3>Manutenção mensal</h3><p>Opcional. Atualizações, melhorias e suporte contínuo.</p></div></div>
-</div>
-</section>
-
-<section id="sobre">
-<h2>Sobre a RYNØX</h2>
-<p>
-A RYNØX cria presença digital profissional para negócios e criadores
-que querem transmitir confiança e gerar resultado real.
-</p>
-</section>
-
-<section id="contato">
-<h2>Pronto pra ter um site profissional?</h2>
-<p>Seu site fala por você antes de qualquer conversa.</p>
-<a class="btn" href="https://wa.me/5562999483199" target="_self">
-FALAR COM A RYNØX
-</a>
-</section>
-
-<footer>
-© 2025 RYNØX • Presença digital profissional
-</footer>
-
-<script>
-const items=document.querySelectorAll('header,section');
-const obs=new IntersectionObserver(e=>{
-  e.forEach(i=>i.isIntersecting&&i.target.classList.add('show'))
-},{threshold:.2});
-items.forEach(i=>obs.observe(i));
-</script>
-
+<footer>© 2025 RYNØX</footer>
+<script src="script.js"></script>
 </body>
 </html>

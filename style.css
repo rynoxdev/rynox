@@ -1,0 +1,129 @@
+:root {
+  --bg:#0e0e11;
+  --card:#16161d;
+  --text:#f5f5f5;
+  --muted:#cfcfcf;
+  --blue:#4da3ff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:radial-gradient(circle at top,#15151c,#0e0e11);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+header,section{
+  max-width:1000px;
+  margin:auto;
+  padding:80px 20px;
+  opacity:0;
+  transform:translateY(30px);
+  transition:.8s ease;
+}
+header.show,section.show{opacity:1;transform:none}
+
+header{text-align:center}
+header img{width:140px;margin-bottom:30px}
+
+nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:#0e0e11cc;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #1f1f28;
+  z-index:10;
+}
+nav ul{
+  max-width:1000px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  gap:24px;
+  list-style:none;
+}
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:500;
+}
+nav a:hover{color:#fff}
+
+h1{font-size:3rem;font-weight:800}
+h2{font-size:2rem;margin-bottom:40px}
+p{font-size:1.15rem;color:var(--muted);line-height:1.7}
+
+.btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:18px 42px;
+  background:linear-gradient(135deg,#fff,#dcdcdc);
+  color:#000;
+  font-weight:700;
+  border-radius:14px;
+  text-decoration:none;
+  animation:pulse 2.2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,255,255,.35)}
+  70%{box-shadow:0 0 0 18px rgba(255,255,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+}
+
+.card{
+  position:relative;
+  padding:2px;
+  border-radius:22px;
+  overflow:hidden;
+}
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:conic-gradient(from 0deg,transparent,var(--blue),transparent 30%);
+  animation:border-spin 4s linear infinite;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  inset:2px;
+  background:var(--card);
+  border-radius:20px;
+  z-index:1;
+}
+.card-inner{
+  position:relative;
+  z-index:2;
+  padding:42px 30px;
+}
+.card-inner span{font-size:28px;display:block;margin-bottom:14px}
+.card-inner h3{margin:0 0 10px;font-size:1.2rem}
+
+@keyframes border-spin{
+  from{transform:rotate(0)}
+  to{transform:rotate(360deg)}
+}
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  font-size:.9rem;
+  color:#777;
+  border-top:1px solid #1f1f28;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  header,section{padding:60px 18px}
+  h1{font-size:2.2rem}
+  h2{text-align:center;font-size:1.6rem}
+  .btn{width:100%;text-align:center}
+}
